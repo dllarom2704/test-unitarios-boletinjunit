@@ -1,6 +1,7 @@
 package es.iessoterohernandez.daw.endes.ejerciciosUnitarias;
 
 import java.text.NumberFormat;
+import java.util.Locale;
 
 /**
  * Account is a bank account with basic services for deposit,
@@ -8,7 +9,7 @@ import java.text.NumberFormat;
  */
 public class Account
 {
-    private NumberFormat fmt = NumberFormat.getCurrencyInstance();
+    private NumberFormat fmt = NumberFormat.getCurrencyInstance(Locale.GERMANY);
 
     private final float kInterestRate = 0.045f;  // interest rate of 4.5%
 

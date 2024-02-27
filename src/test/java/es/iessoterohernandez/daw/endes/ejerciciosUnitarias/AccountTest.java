@@ -8,6 +8,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 public class AccountTest {
+	
 	private Account a;
 
 	@BeforeEach
@@ -48,10 +49,10 @@ public class AccountTest {
 		a.addInterest();
 		assertEquals(1045, a.getBalance());
 	}
-	
+
 	@Test
 	public void toStringTest() {
-		assertEquals("123456789\tOwner\t1.000,00 €", a.toString());
+		assertEquals("123456789\tOwner\t1.000,00 €", a.toString().replace('\u00A0', ' '));
 	}
 
 }
